@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="my">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>RedBlog — မြန်မာ့ဗဟုသုတ</title>
+  <meta name="description" content="နည်းပညာ၊ အင်တာနက်၊ ဗဟုသုတနှင့် စိတ်ဝင်စားဖွယ်ရာ မြန်မာဆောင်းပါးများကို RedBlog တွင် ဖတ်ရှုပါ။">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#101010">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="RedBlog — မြန်မာ့ဗဟုသုတ">
+  <meta property="og:description" content="နည်းပညာနှင့် ဗဟုသုတများကို မြန်မာလို ဖတ်ရှုပါ။">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="./">RED<span>BLOG</span></a>
+    <p class="tagline">ဗဟုသုတတွေကို မျှဝေကြမယ်။</p>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">WELCOME TO REDBLOG</p>
+      <h1>သိချင်တာတွေကို <span>ရှာဖွေဖတ်ရှုပါ။</span></h1>
+      <p>နည်းပညာ၊ အင်တာနက်နဲ့ နေ့စဉ်ဘဝအတွက်
+        အသုံးဝင်တဲ့ ဗဟုသုတများ။</p>
+
+      <form id="search-form" class="search-box" role="search">
+        <input
+          id="search-input"
+          type="search"
+          placeholder="ဆောင်းပါး ရှာရန်..."
+          aria-label="ဆောင်းပါး ရှာရန်"
+        >
+        <button type="submit">ရှာမယ်</button>
+      </form>
+    </section>
+
+    <section class="blog-section" aria-labelledby="posts-heading">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">EXPLORE ARTICLES</p>
+          <h2 id="posts-heading">ဆောင်းပါးများ</h2>
+        </div>
+        <span id="result-count" aria-live="polite"></span>
+      </div>
+
+      <nav id="categories" class="categories"
+        aria-label="ဆောင်းပါးအမျိုးအစား">
+        <button class="category active" data-category="all">
+          အားလုံး
+        </button>
+        <button class="category" data-category="နည်းပညာ">
+          နည်းပညာ
+        </button>
+        <button class="category" data-category="အင်တာနက်">
+          အင်တာနက်
+        </button>
+        <button class="category" data-category="ဗဟုသုတ">
+          ဗဟုသုတ
+        </button>
+      </nav>
+
+      <div id="article-list" class="article-grid">
+        <article class="article-card"
+          data-category="နည်းပညာ"
+          data-search="နည်းပညာ website html css javascript စတင်လေ့လာ">
+          <div class="card-top"><span>နည်းပညာ</span><span>01</span></div>
+          <h3>Website တစ်ခုကို ဘယ်လိုစတင်တည်ဆောက်မလဲ</h3>
+          <p>HTML၊ CSS နဲ့ JavaScript တို့ရဲ့ အခြေခံကို
+            လေ့လာပြီး ကိုယ်ပိုင် Website တစ်ခု ဖန်တီးကြည့်ပါ။</p>
+          <details>
+            <summary>ဆောင်းပါး ဖတ်ရန်</summary>
+            <p>HTML က Website ရဲ့ ဖွဲ့စည်းပုံကို ဖန်တီးပေးတယ်။
+              CSS က အရောင်နဲ့ ဒီဇိုင်းကို ပြင်ဆင်ပေးပြီး
+              JavaScript က Search လို လုပ်ဆောင်ချက်တွေ
+              ထည့်ပေးနိုင်တယ်။ အခြေခံတွေကို လေ့လာပြီး
+              ကိုယ်ပိုင် Project လေးတစ်ခုနဲ့ စမ်းသပ်ပါ။</p>
+          </details>
+        </article>
+
+        <article class="article-card"
+          data-category="အင်တာနက်"
+          data-search="အင်တာနက် အွန်လိုင်း လုံခြုံရေး password account">
+          <div class="card-top"><span>အင်တာနက်</span><span>02</span></div>
+          <h3>အင်တာနက်ကို လုံခြုံစွာ အသုံးပြုနည်း</h3>
+          <p>ကိုယ်ရေးအချက်အလက်နဲ့ Online Account တွေကို
+            ကာကွယ်ဖို့ သိထားသင့်တဲ့ အချက်များ။</p>
+          <details>
+            <summary>ဆောင်းပါး ဖတ်ရန်</summary>
+            <p>Account တစ်ခုစီအတွက် မတူညီတဲ့ ခန့်မှန်းရခက်သော
+              Password ကို သုံးပါ။ Two-factor authentication
+              ရနိုင်ရင် ဖွင့်ထားပါ။ မသိတဲ့ Link တွေကို
+              မနှိပ်ပါနဲ့။ Password နဲ့ အတည်ပြုကုဒ်တွေကို
+              တခြားသူတွေကို မပေးပါနဲ့။</p>
+          </details>
+        </article>
+
+        <article class="article-card"
+          data-category="ဗဟုသုတ"
+          data-search="ဗဟုသုတ စာဖတ် လေ့လာ အလေ့အကျင့်">
+          <div class="card-top"><span>ဗဟုသုတ</span><span>03</span></div>
+          <h3>နေ့စဉ် ဗဟုသုတတိုးပွားအောင် လုပ်နည်း</h3>
+          <p>အချိန်နည်းနည်းပေးပြီး နေ့တိုင်းအသစ်တစ်ခု
+            လေ့လာနိုင်ဖို့ လွယ်ကူတဲ့ နည်းလမ်းများ။</p>
+          <details>
+            <summary>ဆောင်းပါး ဖတ်ရန်</summary>
+            <p>နေ့စဉ် မိနစ် ၁၅ မိနစ်ခန့် သတ်မှတ်ပြီး
+              စိတ်ဝင်စားရာ အကြောင်းအရာတစ်ခုကို ဖတ်ပါ။
+              အရေးကြီးတဲ့အချက်တွေကို မှတ်စုရေးပြီး
+              ယုံကြည်ရတဲ့ ရင်းမြစ်တွေနဲ့ ပြန်လည်စစ်ဆေးပါ။
+              လေ့လာထားတာကို လက်တွေ့အသုံးချကြည့်ပါ။</p>
+          </details>
+        </article>
+      </div>
+
+      <p id="empty-message" class="empty-message" hidden>
+        ရှာဖွေမှုနဲ့ ကိုက်ညီတဲ့ ဆောင်းပါး မတွေ့ပါ။
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 RedBlog. All rights reserved.</p>
+    <p>မြန်မာဘာသာဖြင့် ဗဟုသုတများ မျှဝေခြင်း။</p>
+  </footer>
+</body>
+</html>
